@@ -10,7 +10,7 @@
             "port": 3306,
             "driver": "MySQL",
             "name": "MySQL Local",
-            "database": "abc",
+            "database": "ark",
             "username": "root",
             "password": "raza123",
             "connectionTimeout": 30
