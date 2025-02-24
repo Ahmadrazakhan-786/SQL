@@ -29,7 +29,7 @@ SELECT city from data;
 SELECT DISTINCT city FROM data; -- returns unique city names
 
 
--- clauses:
+-- where clauses:
 
 SELECT * FROM data WHERE marks >= 80;
 SELECT * FROM data WHERE city = "Mumbai";
@@ -48,3 +48,28 @@ SELECT * FROM data WHERE city IN ('delhi', 'mumbai', 'goa'); -- matches the valu
 SELECT * FROM data WHERE city NOT IN('delhi', 'mumbai');
 
 SELECT * FROM data LIMIT 3; -- returns the data of only first 3
+
+-- order by clause:
+
+SELECT * FROM data ORDER BY city ASC ; -- order by clause returns data in asc or desc order
+
+SELECT * FROM data ORDER BY marks DESC LIMIT 3; -- returns the top 3 marks 
+
+-- AGGREGATE FUNCTIONS : returns a single value
+
+SELECT MAX(marks) FROM data; -- returns the max marks present in the table
+SELECT MIN(marks) FROM data; 
+
+SELECT AVG(marks) FROM data; -- returns the average of the marks
+
+SELECT COUNT(city) FROM data; -- returns the total no. of city in the table
+
+SELECT SUM(marks) from data;
+
+-- group by clause:
+
+SELECT city, COUNT(roll_no) FROM data GROUP BY city;
+
+SELECT city, AVG(marks) from data GROUP BY city;
+
+SELECT city, AVG(marks) from data GROUP BY city ORDER BY city ASC;
