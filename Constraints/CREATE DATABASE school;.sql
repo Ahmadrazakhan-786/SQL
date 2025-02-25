@@ -73,3 +73,10 @@ SELECT city, COUNT(roll_no) FROM data GROUP BY city;
 SELECT city, AVG(marks) from data GROUP BY city;
 
 SELECT city, AVG(marks) from data GROUP BY city ORDER BY city ASC;
+
+
+-- Having clause: similar to where, 'Where'-> conditions on rows while 'Having'-> conditions on groups
+
+SELECT city, count(roll_no) FROM data GROUP BY city HAVING max(marks) > 90;
+
+SELECT city FROM data WHERE grades = 'A' GROUP BY city HAVING max(marks) > 90 ORDER BY city ASC;
