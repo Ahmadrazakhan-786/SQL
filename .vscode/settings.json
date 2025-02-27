@@ -10,7 +10,7 @@
             "port": 3306,
             "driver": "MySQL",
             "name": "MySQL Local",
-            "database": "khan",
+            "database": "practical",
             "username": "root",
             "password": "raza123",
             "connectionTimeout": 30
