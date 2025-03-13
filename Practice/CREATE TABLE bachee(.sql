@@ -19,3 +19,4 @@ ALTER TABLE bachee CHANGE COLUMN name full_name VARCHAR(25);
 DELETE FROM bachee WHERE marks<85;
 
 ALTER TABLE bachee DROP COLUMN grades;
+
