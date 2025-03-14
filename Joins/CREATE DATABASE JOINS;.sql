@@ -38,3 +38,14 @@ SELECT * FROM student AS s INNER JOIN course AS c ON s.id = c.id;
 -- NOTE: AS S OR AS C : it is an alias(alternate name)
 -- INNER JOIN: it return records that have matching values in both table
 
+-- LEFT JOIN: Returns all records from left table, and matched records from right table
+
+SELECT * FROM student AS s LEFT JOIN course AS c ON s.id =  c.id;
+
+-- RIGHT JOIN: Returns all records from right table, and matched records from left table
+
+SELECT * FROM student AS s RIGHT JOIN course AS c ON s.id = c.id;
+
+-- FULL JOIN: Returns all records when there is a match in either left or right table
+
+SELECT * FROM student AS s LEFT JOIN course AS c ON s.id = c.id UNION SELECT * FROM student AS s RIGHT JOIN course AS c ON s.id = c.id;
