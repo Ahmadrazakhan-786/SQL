@@ -80,3 +80,11 @@ INSERT INTO employee(id, name, manager_id) VALUES
 SELECT * FROM employee;
 
 SELECT a.name AS manager_name, b.name FROM employee AS a JOIN employee AS b ON a.id = b.manager_id;
+
+
+
+-- UNION: It removes the duplicate values
+-- UNION ALL: It includes the duplicate values
+
+SELECT name FROM employee UNION SELECT name FROM employee;
+SELECT name FROM employee UNION ALL SELECT name FROM employee;
