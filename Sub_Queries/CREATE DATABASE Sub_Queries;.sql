@@ -34,3 +34,12 @@ SELECT name,marks FROM students WHERE marks > (SELECT AVG(marks) FROM students);
 SELECT roll_no FROM students WHERE roll_no % 2 = 0;
 
 SELECT name, roll_no FROM students WHERE roll_no IN (SELECT roll_no FROM students WHERE roll_no % 2 = 0);
+
+SELECT * FROM students WHERE city = 'delhi';
+
+SELECT MAX(marks) FROM (SELECT * FROM students WHERE city = 'delhi') AS temp;
+
+-- VIEWS: virtual table
+CREATE VIEW view1 AS SELECT roll_no, name, marks FROM students;
+
+SELECT * FROM view1;
